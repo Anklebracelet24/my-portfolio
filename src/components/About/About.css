@@ -1,0 +1,131 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin: 80px 170px;
+}
+
+.about-title {
+  position: relative;
+}
+.about-title h1 {
+  padding: 0px 30px;
+  font-size: 60px;
+  font-weight: 600;
+}
+.about-title img {
+  position: absolute;
+  width: 130px;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.about-section {
+  display: flex;
+  gap: 80px;
+}
+
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.about-para {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0.8px;
+}
+.p-spacing {
+  margin-bottom: 20px;
+}
+.about-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Container for each tech stack section */
+.about-skill {
+  display: flex; /* Makes subtitle and tech stack body appear side by side */
+  align-items: center; /* Vertically aligns subtitle and tech stack body */
+  margin-bottom: 20px; /* Adds space between tech stack sections */
+}
+
+/* Styles for the tech-stack-subtitle */
+.tech-stack-subtitle {
+  margin-right: 20px; /* Space between the subtitle and the images */
+  font-weight: bold; /* Optional: make the subtitle bold for better visibility */
+  min-width: 150px;
+}
+
+/* Styles for the tech-stack-body (where images are displayed) */
+.tech-stack-body {
+  display: flex;
+  flex-direction: row; /* Align images horizontally */
+  align-items: center; /* Vertically centers the images */
+  gap: 15px; /* Adds space between images */
+}
+
+/* Styles for individual images to ensure consistency */
+.tech-stack-body img {
+  width: 70px; /* Adjust the size of each icon */
+  height: 70px;
+  object-fit: contain; /* Ensures the image aspect ratio is maintained */
+}
+
+/* Ensures all images align consistently */
+.tech-stack-body img:first-child, /* First image */
+.tech-stack-body img:nth-child(2) {
+  /* Second image */
+  vertical-align: middle; /* Ensures they align in the middle of the row */
+}
+
+@media (max-width: 768px) {
+  .about {
+    gap: 80px;
+    margin: 50px 70px;
+    align-items: start;
+  }
+  .about-title h1 {
+    font-size: 50px;
+    padding: 0;
+  }
+  .about-title img {
+    width: 130px;
+    right: -20px;
+  }
+  .about-section {
+    flex-direction: column;
+  }
+  .about-left {
+    display: none;
+  }
+  .about-para {
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .tech-stack-header {
+    font-size: 20px;
+  }
+  .about-skill {
+    gap: 20px;
+    align-items: center;
+  }
+  .about-skill p {
+    font-size: 20px;
+  }
+  .tech-stack-subtitle {
+    font-size: 18px;
+  }
+  .tech-stack-body img {
+    width: 80px; /* Adjust the size of each icon */
+    height: 80px;
+    object-fit: contain;
+  }
+}

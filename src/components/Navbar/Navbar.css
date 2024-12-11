@@ -1,0 +1,102 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 170px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 60px;
+  font-size: 20px;
+}
+
+.nav-connect {
+  padding: 20px 30px;
+  border-radius: 50px;
+  background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.06%);
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.nav-connect:hover {
+  transform: scale(1.05);
+}
+
+.nav-menu p {
+  cursor: pointer; /* Makes it clear the text is interactive */
+  transition: background 0.3s ease; /* Smooth transition for background */
+  position: relative; /* Position for the pseudo-element */
+  display: inline-block; /* Make sure the text gets wrapped in an inline-block */
+}
+
+.nav-menu p::after {
+  content: ""; /* Create an empty pseudo-element */
+  position: absolute;
+  bottom: 0; /* Position it at the bottom of the text */
+  left: 0;
+  width: 100%; /* Make it the full width of the text */
+  height: 2px; /* Height of the underline */
+  background: linear-gradient(
+    267deg,
+    #da7c25 0.36%,
+    #b923e1 102.06%
+  ); /* Gradient background */
+  transform: scaleX(0); /* Initially hide the underline */
+  transform-origin: bottom right; /* Make the scale effect start from the right */
+  transition: transform 0.3s ease; /* Smooth transition for the underline */
+}
+
+.nav-menu p:hover::after {
+  transform: scaleX(1); /* Show the underline when hovered */
+  transform-origin: bottom left; /* Make the scale effect go to the left */
+}
+
+.nav-mob-close {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    margin: 20px 50px;
+  }
+  .nav-connect {
+    display: none;
+  }
+
+  .nav-mob-open {
+    display: block;
+    position: fixed;
+    right: 30px;
+  }
+
+  .nav-mob-close {
+    display: block;
+    position: relative;
+    top: 30px;
+    left: 290px;
+    width: 30px;
+  }
+  .nav-menu {
+    position: fixed;
+    flex-direction: column;
+    align-items: start;
+    top: 0;
+    gap: 30px;
+    background-color: #1f0016;
+    width: 350px;
+    height: 100%;
+    z-index: 2;
+    transition: right 0.5s;
+    right: -350px;
+  }
+  .nav-menu li {
+    font-size: 30px;
+    padding-left: 100px;
+    flex-direction: row;
+    gap: 20px;
+  }
+}
