@@ -29,7 +29,7 @@ const About = () => {
           <div className="about-para">
             <p>
               Hi my name is Mark Anthony,a self-taught developer, and a proud
-              Zuitt BootCamp alumnus, now specializing as a Full Stack
+              Zuitt Tech Program alumnus, now specializing as a Full Stack
               Developer, <br />
               <p className="p-spacing">
                 with a passion for coding and a keen eye for design, I thrive on
